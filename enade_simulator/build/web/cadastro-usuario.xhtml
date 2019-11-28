@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<ui:decorate 
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:b="http://bootsfaces.net/ui"
+    template="template.xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <h1>Cadastrar Usuário</h1>
+    <hr/>
+    <b:form horizontal="true" style="width: 60%">
+        <b:inputText label="Nome:" colMd="10" labelColMd="2" name="nome" id="nome">
+            <f:facet name="prepend">
+                <b:icon name="user" />
+            </f:facet>
+        </b:inputText>
+        <b:inputText label="CPF:" colMd="6" labelColMd="2" name="cpf" id="cpf">
+            <f:facet name="prepend">
+                <b:iconAwesome value="newspaper-o" />
+            </f:facet>
+        </b:inputText>
+        <b:inputText label="E-mail:" colMd="6" labelColMd="2" name="email" id="email">
+            <f:facet name="prepend">
+                <h:outputText value="@" />
+            </f:facet>
+        </b:inputText>
+        <b:inputText placeholder="Username" required="true" label="Username" colMd="10" labelColMd="2">
+            <f:facet name="prepend">
+                <b:icon name="user" />
+            </f:facet>
+        </b:inputText>
+
+        <b:inputText placeholder="Password" label="Password" colMd="6" labelColMd="2">
+            <f:facet name="prepend">
+                <b:iconAwesome name="key" />
+            </f:facet>
+        </b:inputText>
+
+        <b:selectOneMenu value="#{selectOneMenuBean.type}" colMd="4" labelColMd="2" required="true" label="Perfil:" >
+            <f:facet name="prepend">
+                <b:icon name="user" />
+            </f:facet>
+            <f:selectItem itemLabel="Aluno" itemValue="1" />
+            <f:selectItem itemLabel="Proffessor" itemValue="2" />
+        </b:selectOneMenu>
+
+        <b:commandButton value="Submit AJAX" process="@form" update="@form" />
+    </b:form>
+</ui:decorate>
+
+
