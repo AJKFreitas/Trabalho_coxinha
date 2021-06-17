@@ -12,12 +12,12 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <primefaces.version>7.0</primefaces.version>
-        <admin.version>1.0.2</admin.version>
-        <hibernate.version>5.4.2.Final</hibernate.version>
+        <primefaces.version>8.0</primefaces.version>
+        <admin.version>1.2.0</admin.version>
+        <hibernate.version>5.4.24.Final</hibernate.version>
         <mysql.version>5.1.47</mysql.version>
-        <poi.version>3.17</poi.version>
-        <jasperreports.version>6.8.0</jasperreports.version>
+        <poi.version>4.1.1</poi.version>
+        <jasperreports.version>6.17.0</jasperreports.version>
     </properties>
 
     <dependencies>
@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
-            <version>5.0</version>
+            <version>8.0</version>
         </dependency>
         <dependency>
             <groupId>org.primefaces.extensions</groupId>
